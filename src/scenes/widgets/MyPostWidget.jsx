@@ -134,17 +134,17 @@ const MyPostWidget = ({ picturePath }) => {
         {isNonMobileScreens ? (
           <>
             <FlexBetween gap="0.25rem">
-              <GifBoxOutlined sx={{ color: mediumMain }} />
+              <GifBoxOutlined sx={{ color: mediumMain, cursor: "pointer" }} />
               <Typography color={mediumMain}>Clip</Typography>
             </FlexBetween>
 
             <FlexBetween gap="0.25rem">
-              <AttachFileOutlined sx={{ color: mediumMain }} />
+              <AttachFileOutlined sx={{ color: mediumMain, cursor: "pointer" }} />
               <Typography color={mediumMain}>Attachment</Typography>
             </FlexBetween>
 
             <FlexBetween gap="0.25rem">
-              <MicOutlined sx={{ color: mediumMain }} />
+              <MicOutlined sx={{ color: mediumMain, cursor: "pointer"  }} />
               <Typography color={mediumMain}>Audio</Typography>
             </FlexBetween>
           </>
@@ -155,12 +155,13 @@ const MyPostWidget = ({ picturePath }) => {
         )}
 
         <Button
-          disabled={!post}
+          // disabled={!post}
           onClick={handlePost}
-          sx={{
-            color: palette.background.alt,
-            backgroundColor: palette.primary.main,
+          style={{
+            color: "white",
+            backgroundColor: "#006eff",
             borderRadius: "3rem",
+            cursor: "pointer",
           }}
         >
           POST
